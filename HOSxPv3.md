@@ -3,7 +3,7 @@ Flow การดึงข้อมูล HOSxP version 3:
 ```mermaid
 flowchart LR
 START(Start) --> OVST([table: ovst])
-subgraph OPD visit
+subgraph OP Process
 OVST --> HASDX{Has diagnosis?}
 HASDX --> |Yes| HN((HN, VN))
 HN --> |hn,vn| OPD(OPD)
@@ -15,7 +15,7 @@ end
 HASDX --> |No| END
 START --> IPT([table: ipt])
 
-subgraph IPT visit
+subgraph IP Process
 IPT --> DISCHARGE{Patient discharge?}
 DISCHARGE --> |Yes| AN((AN))
 AN --> IP(IP)
