@@ -17,7 +17,7 @@ START --> IPT([table: ipt])
 
 subgraph IPT visit
 IPT --> DISCHARGE{Patient discharge?}
-DISCHARGE --> |Yes| AN(AN)
+DISCHARGE --> |Yes| AN((AN))
 AN --> IP(IP)
 AN --> IPDX(IPDX)
 AN --> IPOP(IPOP)
@@ -39,7 +39,7 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 classDef orange fill:#f96,stroke:#333,stroke-width:2px;
 classDef yellow fill:#ffffa8,stroke:#333,stroke-width:2px;
 
-class START,ZIP,HN green
+class START,ZIP,HN,AN green
 class END orange
 class OVST,IPT yellow
 ```
